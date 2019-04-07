@@ -5,7 +5,7 @@ practices of Spring boot application application configuration in
 Docker and Kubernetes environments  
 
 Main idea is to have unified way to inject configuration into application in all 3 cases
- - Standalone non dockerized run via `java -jar app.jar`
+ - Standalone non dockerized run via `java -jar app.jar` or `gradle bootRun` or IDE Green-Run-Button
  - Launch via `docker run` 
  - Launch in K8S environment via `kubectl apply -f deployment.yaml` 
  
