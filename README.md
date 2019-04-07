@@ -12,9 +12,8 @@ Main idea is to have unified way to inject configuration into application in all
 
 # Steps to run prototype
 
-Before any case: in the root folder 
-rename `application.properties.template` to `application.properties` and set your own values. 
-Do not commit this new file to git.
+Before you start. In the root folder. rename `application.properties.template` to `application.properties` and set your own values. 
+Do not commit this new file to git!
 
 ## Non containerized, local development environment
 
