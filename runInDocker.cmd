@@ -1,0 +1,1 @@
+docker run  -v %cd%:/code %1

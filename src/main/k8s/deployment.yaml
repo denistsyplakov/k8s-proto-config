@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-proto
+spec:
+  selector:
+    matchLabels:
+      app: k8s-proto
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: k8s-proto
+    spec:
+      containers:
+        - name: k8s-proto
+          image: habbahen/docker-secret-proto
+          volumeMounts:
+          - name: application-properties
+            mountPath: /config
+      volumes:
+      - name: application-properties
+        configMap:
+          name: application.properties

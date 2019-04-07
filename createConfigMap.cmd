@@ -1,0 +1,1 @@
+kubectl create configmap application.properties --from-file=application.properties
