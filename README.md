@@ -92,6 +92,7 @@ In the example above we have two sets of configuration properties.
 
  - First - default, embedded into jar file
  - Second - second contains properties that are specific for a given environment. 
+ 
  Theses properties could be used in a unified way in 3 cases: non-dockerized run, 
  via `docker run` command and in k8s cluster.  
  
