@@ -36,13 +36,15 @@ Very simple. This is it, new config values will be used.
 The root folder run
 
 `gradle clean build 
+
 docker build -t image-name .`
 
 ### Step2: Run container
 
 To run with default properties from `src/main/resources/application.properties` run
 
-`docker run image-name` -- this is what you usually do in the development mode. 
+`docker run image-name` -- this is what you usually do in the development mode assuming that
+default values are set for developer convenience
 
 To override it with your local properties from the project root folder run 
 
@@ -65,7 +67,9 @@ and we need to configure it with custom `application.properties`
 ### Step1: build image and push it to your project docker hub
 
 `gradle clean build 
+
 docker build -t image-name .
+
 docker push image-name`
 
 ### Step2: create K8S configmap
