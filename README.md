@@ -20,6 +20,7 @@ Do not commit this new file to git! In real life it usually contains some secret
 Run 
 
 `gradle build
+
 java -jar build/libs/ds-0.0.1.jar` 
 
 Or just 
