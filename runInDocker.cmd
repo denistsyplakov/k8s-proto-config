@@ -1,1 +1,1 @@
-docker run  -v %cd%:/code %1
+docker run  -v %cd%:/config %1

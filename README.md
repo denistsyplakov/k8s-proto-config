@@ -2,7 +2,7 @@
 
 This is a prototype that demonstrates best 
 practices of Spring boot application application configuration in 
-Docker and Kubernetes environments  
+Docker and Kubernetes environments. 
 
 Main idea is to have unified way to inject configuration into application in all 3 cases
  - Standalone non dockerized run via `java -jar app.jar` or `gradle bootRun` or IDE Green-Run-Button
@@ -10,7 +10,7 @@ Main idea is to have unified way to inject configuration into application in all
  - Launch in K8S environment via `kubectl apply -f deployment.yaml` 
  
 
-# Steps to run prototype
+# Ways to run prototype
 
 Before you start. In the root folder. rename `application.properties.template` to `application.properties` and set your own values. 
 Do not commit this new file to git! In real life it usually contains some secret values.
@@ -35,9 +35,9 @@ Very simple. This is it, new config values will be used.
 
 The root folder run
 
-`gradle clean build 
+`gradle clean build` 
 
-docker build -t image-name .`
+`docker build -t image-name .`
 
 ### Step2: Run container
 
@@ -66,11 +66,11 @@ and we need to configure it with custom `application.properties`
 
 ### Step1: build image and push it to your project docker hub
 
-`gradle clean build 
+`gradle clean build` 
 
-docker build -t image-name .
+`docker build -t image-name .`
 
-docker push image-name`
+`docker push image-name`
 
 ### Step2: create K8S configmap
 
@@ -93,7 +93,7 @@ In the example above we have two sets of configuration properties.
  - First - default, embedded into jar file
  - Second - second contains properties that are specific for a given environment. 
  
- Theses properties could be used in a unified way in 3 cases: non-dockerized run, 
+ These properties could be used in a unified way in 3 cases: non-dockerized run, 
  via `docker run` command and in k8s cluster.  
  
 I hope this will help you to avoid zillions of ${ENV_VARIABLE_10050} variables 
