@@ -1,7 +1,7 @@
 # About 
 
 This is a prototype that demonstrates best 
-practices of Spring boot application application configuration in 
+practices of Spring boot application configuration in 
 Docker and Kubernetes environments. 
 
 Main idea of this prototype is to have unified way to inject a configuration into an application in all 3 
